@@ -8,9 +8,7 @@ Required:
 
 - Node v18.12.1
 
-To get up and running follow these instructions:
-
-1. npm install
+To get up and running just run "npm install" in your Terminal.
 
 You can find the SQLite database under /src/database/presidentsDb.sqlite. It should already be populated with the correct starting data. If you ever need to reset the database to its original state just run "npm run seedDb" in your Terminal. That should reset the data to the state it was before you started working on your exercises (of which exercise 1-7 involve altering/adding data to the db).
 
