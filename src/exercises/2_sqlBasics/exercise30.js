@@ -1,7 +1,9 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the IN/NOT IN operator to retrieve a list of pets that are not cats, dogs or horses.
+Use the LIKE/NOT LIKE operator and wilcards to retrieve a list of the first ladies
+that were an in-law relation (e.g. uncle-in-law, father-in-law) of the president 
+they served under.
 
 Log the response to ther Terminal.
 */

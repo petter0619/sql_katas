@@ -1,13 +1,14 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the presidents that were part of the Whig, Federalist, or Democratic-Republican parties.
+Use the IN/NOT IN operator to retrieve a list of pets that are cats or rabbits.
+
 Log the response to ther Terminal.
 */
 
 const exercise = async () => {
   try {
-    const query = `SELECT name, party FROM president WHERE party = 'Whig' OR party = 'Democratic-Republican' or party = 'Federalist'`
+    const query = `SELECT name, species FROM pet WHERE species IN ('Cat', 'Rabbit')`
 
     const [results, metadata] = await sequelize.query(query)
 

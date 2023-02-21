@@ -1,13 +1,14 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the pets that we know the birth date of and that are not dead.
-Log the response to ther Terminal.
+Retrieve a list of all first ladies born between 1800 and 1900
+
+Log the response to the Terminal.
 */
 
 const exercise = async () => {
   try {
-    const query = `SELECT * FROM pet WHERE birth_date IS NOT NULL AND death_date IS NULL`
+    const query = `SELECT name, birth_year FROM first_lady WHERE birth_year BETWEEN 1800 AND 1900;`
 
     const [results, metadata] = await sequelize.query(query)
 

@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the COUNT aggregate function to answer the question: How many 
-first ladies were not married to the president?
+Use the COUNT aggregate function to calculate how many more first ladies 
+than presidents there have been. HINT: Use a nested SELECT query.
 
 Log the response to ther Terminal.
 */

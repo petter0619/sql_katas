@@ -2,7 +2,7 @@ const { sequelize } = require('../../database/config')
 
 /*
 Use the COUNT aggregate function to answer the question: How many 
-democratic presidents have there been?
+first ladies were not married to the president?
 
 Log the response to ther Terminal.
 */
@@ -10,7 +10,7 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT COUNT(*) AS num_of_presidents FROM president WHERE party = 'Democrat';
+      SELECT COUNT(*) AS num_of_first_ladies FROM first_lady WHERE wife_of_president = FALSE;
     `
 
     const [results, metadata] = await sequelize.query(query)

@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the COUNT aggregate function to answer the question: How many 
-first ladies were not married to the president?
+Use the COUNT aggregate function to calculate how many more first ladies 
+than presidents there have been. HINT: Use a nested SELECT query.
 
 Log the response to ther Terminal.
 */
@@ -10,7 +10,7 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT COUNT(*) AS num_of_first_ladies FROM first_lady WHERE wife_of_president = FALSE;
+      SELECT COUNT(*) - (SELECT COUNT(*) FROM president) AS president_first_lady_diff FROM first_lady;
     `
 
     const [results, metadata] = await sequelize.query(query)

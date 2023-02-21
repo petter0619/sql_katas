@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the MIN aggregate function to find the youngest ever first lady.
+Use the MAX aggregate function to find the president that spend the most time in office.
 
 Log the response to ther Terminal.
 */

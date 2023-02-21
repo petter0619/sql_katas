@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all Republican presidents (number, name, party, sat_two_full_terms) that have sat two full terms
+Retrieve a list of the pets that we know the birth date of and that are not dead.
 Log the response to ther Terminal.
 */
 

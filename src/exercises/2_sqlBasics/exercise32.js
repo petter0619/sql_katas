@@ -1,9 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the LIKE/NOT LIKE operator and wilcards to retrieve a list of the first ladies
-that were not an in-law relation (e.g. uncle-in-law, father-in-law) or married to
-the president they served under.
+Retrieve a list of presidents that were republican and sat for 2 full terms
+or where democrat and sat for less than 1461 days.
 
 Log the response to ther Terminal.
 */

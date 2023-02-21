@@ -1,8 +1,9 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Calculate how old each first lady who is not dead is. Use AS to
-give the calculation a descriptive name (e.g. 'age').
+Calculate how old each first lady who is dead became. Also calculate
+how many years they liced after they started their tenure. Use AS to
+give the calculations descriptive names (e.g. 'age', 'years_lived_after_tenure_start'). 
 
 Log the response to ther Terminal.
 */

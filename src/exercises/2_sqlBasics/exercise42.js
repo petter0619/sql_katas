@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all dead presidents ordered by their age (oldest first)
+Use LIMIT and ORDER BY to return the president that spent the least days in office.
 
 Log the response to ther Terminal.
 */

@@ -1,13 +1,13 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the names of presidents that were not in the Democrat or Republican party.
+Retrieve a list of all Republican presidents (number, name, party, sat_two_full_terms) that have sat two full terms
 Log the response to ther Terminal.
 */
 
 const exercise = async () => {
   try {
-    const query = `SELECT name, party FROM president WHERE party != 'Democrat' AND party != 'Republican'`
+    const query = `SELECT number, name, party, sat_two_full_terms FROM president WHERE sat_two_full_terms = TRUE AND party = 'Republican'`
 
     const [results, metadata] = await sequelize.query(query)
 

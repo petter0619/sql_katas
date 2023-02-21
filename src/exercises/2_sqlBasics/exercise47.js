@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the SUM aggregate function to calculate the total number of 
-days a president has been in office.
+Use the AVG aggregate function to calculate average age of a
+first lady when she takes office.
 
 Log the response to ther Terminal.
 */

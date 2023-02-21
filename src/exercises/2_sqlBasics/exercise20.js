@@ -1,9 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all first ladies that were born 1800 or earlier
-
-Log the response to the Terminal.
+Retrieve a list of the names of presidents that were not in the Democrat or Republican party.
+Log the response to ther Terminal.
 */
 
 const exercise = async () => {

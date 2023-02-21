@@ -1,14 +1,13 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all first ladies that were born 1800 or earlier
-
-Log the response to the Terminal.
+Retrieve a list of the names of presidents that were not in the Democrat or Republican party.
+Log the response to ther Terminal.
 */
 
 const exercise = async () => {
   try {
-    const query = `SELECT name, birth_year FROM first_lady WHERE birth_year <= 1800;`
+    const query = `SELECT name, party FROM president WHERE party != 'Democrat' AND party != 'Republican'`
 
     const [results, metadata] = await sequelize.query(query)
 

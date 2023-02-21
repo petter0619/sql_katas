@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the names and birth countries of first ladies
-that were not born in USA:
+Without using the wife_of_president column retrieve a list of the first ladies
+that were not the 'Spouse' of the president they served as first lady for.
 
 Log the response to the Terminal.
 */

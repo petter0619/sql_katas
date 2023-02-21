@@ -2,8 +2,8 @@ const { sequelize } = require('../../database/config')
 
 /*
 Use the LIKE/NOT LIKE operator and wilcards to retrieve a list of the first ladies
-that were an in-law relation (e.g. uncle-in-law, father-in-law) of the president 
-they served under.
+that were not an in-law relation (e.g. uncle-in-law, father-in-law) or married to
+the president they served under.
 
 Log the response to ther Terminal.
 */

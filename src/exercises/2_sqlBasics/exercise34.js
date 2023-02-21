@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of presidents that were not democrat or republican and born before 1900 
-or presidents that are democrat and not dead yet.
+Calculate how old each president (who is dead) became. Use AS to
+give the calculation a descriptive name (e.g. age)
 
 Log the response to ther Terminal.
 */

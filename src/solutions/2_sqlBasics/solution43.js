@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the MIN aggregate function to find the youngest ever first lady.
+Use LIMIT and ORDER BY to return the president that spent the least days in office.
 
 Log the response to ther Terminal.
 */
@@ -9,7 +9,7 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT MIN(age_at_tenure_start) FROM first_lady
+      SELECT name, days_in_office FROM president ORDER BY days_in_office ASC LIMIT 1
     `
 
     const [results, metadata] = await sequelize.query(query)

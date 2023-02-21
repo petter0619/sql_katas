@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the IN/NOT IN operator to retrieve a list of pets that are cats or rabbits.
+Use the IN/NOT IN operator to retrieve a list of pets that are not cats, dogs or horses.
 
 Log the response to ther Terminal.
 */

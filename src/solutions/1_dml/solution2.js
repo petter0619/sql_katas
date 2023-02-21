@@ -15,8 +15,10 @@ const exercise = async () => {
       INSERT INTO first_lady 
       (name, birth_year, tenure_start, age_at_tenure_start, birth_country, wife_of_president, relationship_with_president, fk_president_id)  
       VALUES 
-      ('Jill Biden', 1951, '2021-01-20', 69, 'USA', TRUE, 'Spouse', (SELECT id FROM president WHERE number = 46 AND name = 'Joe Biden'));
+      ('Jill Biden', 1951, '2021-01-20', 69, 'USA', TRUE, 'Spouse', 46);
     `
+
+    // (SELECT id FROM president WHERE number = 46 AND name = 'Joe Biden')
 
     const [results, metadata] = await sequelize.query(query)
 

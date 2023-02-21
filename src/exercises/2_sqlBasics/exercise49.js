@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the AVG aggregate function to calculate how long each dead 
-president has lived on average.
+Use the COUNT aggregate function to answer the question: How many 
+democratic presidents have there been?
 
 Log the response to ther Terminal.
 */

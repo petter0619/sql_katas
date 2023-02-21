@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the names of presidents that were not in the Democrat or Republican party.
+Retrieve a list of all Republican presidents (number, name, party, sat_two_full_terms) that have sat two full terms
 Log the response to ther Terminal.
 */
 

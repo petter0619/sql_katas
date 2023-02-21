@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all first ladies ordered by their age when
-they took office, in the order youngest to oldest.
+Retrieve a list of all presidents ordered by their party name
+and days in office.
 
 Log the response to ther Terminal.
 */
@@ -10,9 +10,9 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT name, age_at_tenure_start
-      FROM first_lady
-      ORDER BY age_at_tenure_start ASC
+      SELECT name, party, days_in_office 
+      FROM president 
+      ORDER BY party, days_in_office
     `
 
     const [results, metadata] = await sequelize.query(query)

@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of presidents that were republican and sat for 2 full terms
-or where democrat and sat for less than 1461 days.
+Retrieve a list of presidents that were not democrat or republican and born before 1900 
+or presidents that are democrat and not dead yet.
 
 Log the response to ther Terminal.
 */

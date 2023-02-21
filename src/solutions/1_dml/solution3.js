@@ -13,16 +13,19 @@ Log the response to the terminal
 */
 
 const exercise = async () => {
+  const joeBidenId = 46
   try {
     const query = `
       INSERT INTO pet
       (name, species, breed, birth_date, death_date, age, fk_president_id)  
       VALUES 
-      ('Champ', 'Dog', 'German Shepherd', '2008-11-11', '2021-06-19', 13, (SELECT id FROM president WHERE number = 46 AND name = 'Joe Biden')),
-      ('Major', 'Dog', 'German Shepherd', '2018-01-17', NULL, 5, (SELECT id FROM president WHERE number = 46 AND name = 'Joe Biden')),
-      ('Commander', 'Dog', 'German Shepherd', '2021-09-01', NULL, 2, (SELECT id FROM president WHERE number = 46 AND name = 'Joe Biden')),
-      ('Willow', 'Cat', NULL, NULL, NULL, NULL, (SELECT id FROM president WHERE number = 46 AND name = 'Joe Biden'));
+      ('Champ', 'Dog', 'German Shepherd', '2008-11-11', '2021-06-19', 13, ${joeBidenId}),
+      ('Major', 'Dog', 'German Shepherd', '2018-01-17', NULL, 5, ${joeBidenId}),
+      ('Commander', 'Dog', 'German Shepherd', '2021-09-01', NULL, 2, ${joeBidenId}),
+      ('Willow', 'Cat', NULL, NULL, NULL, NULL, ${joeBidenId});
     `
+
+    // (SELECT id FROM president WHERE number = 46 AND name = 'Joe Biden')
 
     const [results, metadata] = await sequelize.query(query)
 

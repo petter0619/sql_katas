@@ -1,20 +1,13 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all first ladies that were between 18 and 30 years old 
-when they began their tenure as first lady of the US and where not born
-between 1800 and 1850.
-
-Log the response to the Terminal.
+Retrieve a list of the pets that are either birds or horses.
+Log the response to ther Terminal.
 */
 
 const exercise = async () => {
   try {
-    const query = `
-      SELECT name, birth_year, age_at_tenure_start 
-      FROM first_lady 
-      WHERE age_at_tenure_start BETWEEN 18 AND 30 AND birth_year NOT BETWEEN 1800 AND 1850;
-    `
+    const query = `SELECT name, species FROM pet WHERE species = 'Bird' OR species = 'Horse'`
 
     const [results, metadata] = await sequelize.query(query)
 

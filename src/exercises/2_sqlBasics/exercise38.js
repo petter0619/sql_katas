@@ -1,10 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Calculate the apporximate percentage or their days alive that each dead president 
-spent in office. Give your calculation a descriptive name using AS (e.g.
-percentage_of_life_as_president). HINT:  365 days a year is close enough
-(aka skip leap years)
+Retrieve a list of all presidents ordered by the number of
+days spent in office in descending order.
 
 Log the response to ther Terminal.
 */

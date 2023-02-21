@@ -13,7 +13,7 @@ const exercise = async () => {
     const query = `
       UPDATE first_lady 
       SET tenure_end = '2021-01-20' 
-      WHERE id = (SELECT id FROM first_lady WHERE name = 'Melania Trump') 
+      WHERE name = 'Melania Trump' 
       RETURNING *
     `
 

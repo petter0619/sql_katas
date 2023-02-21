@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use LIMIT and ORDER BY to return the president that spent the least days in office.
+Use the MIN aggregate function to find the youngest ever first lady.
 
 Log the response to ther Terminal.
 */

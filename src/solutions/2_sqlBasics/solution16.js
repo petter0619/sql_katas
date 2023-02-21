@@ -1,13 +1,14 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the pets we know the birth date of.
-Log the response to ther Terminal.
+Retrieve a list of all presidents that sat for less than 1 term (1461 days).
+
+Log the response to the Terminal.
 */
 
 const exercise = async () => {
   try {
-    const query = `SELECT name, birth_date, death_date, age FROM pet WHERE birth_date IS NOT NULL`
+    const query = `SELECT name, days_in_office FROM president WHERE days_in_office < 1461;`
 
     const [results, metadata] = await sequelize.query(query)
 

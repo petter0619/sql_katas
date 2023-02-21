@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the AVG aggregate function to calculate how long each dead 
-president has lived on average.
+Use the COUNT aggregate function to answer the question: How many 
+democratic presidents have there been?
 
 Log the response to ther Terminal.
 */
@@ -10,7 +10,7 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT AVG(death_year - birth_year) AS avg_age FROM president WHERE death_year IS NOT NULL;
+      SELECT COUNT(*) AS num_of_presidents FROM president WHERE party = 'Democrat';
     `
 
     const [results, metadata] = await sequelize.query(query)

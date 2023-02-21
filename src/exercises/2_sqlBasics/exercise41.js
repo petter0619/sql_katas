@@ -1,8 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all presidents ordered by their party name
-and days in office.
+Retrieve a list of all dead presidents ordered by their age (oldest first)
 
 Log the response to ther Terminal.
 */

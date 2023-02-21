@@ -1,13 +1,13 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all Republican presidents (number, name, party, sat_two_full_terms) that have sat two full terms
+Retrieve a list of the pets that we know the birth date of and that are not dead.
 Log the response to ther Terminal.
 */
 
 const exercise = async () => {
   try {
-    const query = `SELECT number, name, party, sat_two_full_terms FROM president WHERE sat_two_full_terms = TRUE AND party = 'Republican'`
+    const query = `SELECT * FROM pet WHERE birth_date IS NOT NULL AND death_date IS NULL`
 
     const [results, metadata] = await sequelize.query(query)
 

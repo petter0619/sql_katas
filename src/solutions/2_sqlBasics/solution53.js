@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-There have been 46 presidents so far. Use DISTINCT to find out how many people
-have been president. HINT: You can wrap DISTINCT with COUNT
+There have been 46 presidents so far. Use DISTINCT to find out how many owned pets. 
+HINT: You can wrap DISTINCT with COUNT
 
 Log the response to ther Terminal.
 */
@@ -10,7 +10,7 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT COUNT(DISTINCT name) AS unique_presidents FROM president;
+      SELECT COUNT(DISTINCT fk_president_id) AS presidents_with_pets FROM pet;
     `
 
     const [results, metadata] = await sequelize.query(query)

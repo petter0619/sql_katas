@@ -1,7 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Find the (dead) president that lived the longest using the MAX operator.
+Use the SUM aggregate function to calculate the total number of 
+days a president has been in office.
 
 Log the response to ther Terminal.
 */

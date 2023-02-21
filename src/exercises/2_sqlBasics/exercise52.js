@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the COUNT aggregate function to calculate how many more first ladies 
-than presidents there have been. HINT: Use a nested SELECT query.
+There have been 46 presidents so far. Use DISTINCT to find out how many people
+have been president. HINT: You can wrap DISTINCT with COUNT
 
 Log the response to ther Terminal.
 */

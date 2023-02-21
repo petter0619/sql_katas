@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-There have been 46 presidents so far. Use DISTINCT to find out how many people
-have been president. HINT: You can wrap DISTINCT with COUNT
+There have been 46 presidents so far. Use DISTINCT to find out how many owned pets. 
+HINT: You can wrap DISTINCT with COUNT
 
 Log the response to ther Terminal.
 */

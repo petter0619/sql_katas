@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all first ladies born between 1800 and 1900
+Retrieve a list of all presidents not born between 1800 and 1900
 
 Log the response to the Terminal.
 */

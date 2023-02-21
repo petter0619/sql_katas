@@ -2,8 +2,8 @@ const { sequelize } = require('../../database/config')
 
 /*
 Use the LIKE/NOT LIKE operator and wilcards to retrieve a list of the first ladies
-that were an in-law relation (e.g. uncle-in-law, father-in-law) of the president 
-they served under.
+that were not an in-law relation (e.g. uncle-in-law, father-in-law) or married to
+the president they served under.
 
 Log the response to ther Terminal.
 */
@@ -13,7 +13,7 @@ const exercise = async () => {
     const query = `
       SELECT name, relationship_with_president 
       FROM first_lady 
-      WHERE relationship_with_president LIKE '%in-law';
+      WHERE relationship_with_president NOT LIKE '%in-law' AND wife_of_president = FALSE;
     `
 
     const [results, metadata] = await sequelize.query(query)

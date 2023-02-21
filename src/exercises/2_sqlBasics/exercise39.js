@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all presidents ordered by the number of
-days spent in office in descending order.
+Retrieve a list of all first ladies ordered by their age when
+they took office, in the order youngest to oldest.
 
 Log the response to ther Terminal.
 */

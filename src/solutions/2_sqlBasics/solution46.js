@@ -1,7 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Find the (dead) president that lived the longest using the MAX operator.
+Use the SUM aggregate function to calculate the total number of 
+days a president has been in office.
 
 Log the response to ther Terminal.
 */
@@ -9,7 +10,7 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT MAX(death_year - birth_year) AS age FROM president WHERE death_year IS NOT NULL;
+      SELECT SUM(days_in_office) AS days_total FROM president;
     `
 
     const [results, metadata] = await sequelize.query(query)

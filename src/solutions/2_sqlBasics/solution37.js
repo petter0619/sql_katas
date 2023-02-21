@@ -1,9 +1,10 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Calculate how old each first lady who is dead became. Also calculate
-how many years they liced after they started their tenure. Use AS to
-give the calculations descriptive names (e.g. 'age', 'years_lived_after_tenure_start'). 
+Calculate the apporximate percentage or their days alive that each dead president 
+spent in office. Give your calculation a descriptive name using AS (e.g.
+percentage_of_life_as_president). HINT:  365 days a year is close enough
+(aka skip leap years)
 
 Log the response to ther Terminal.
 */
@@ -13,9 +14,10 @@ const exercise = async () => {
     const query = `
       SELECT 
         name, 
-        death_year - birth_year AS age, 
-        (death_year - birth_year) - age_at_tenure_start AS years_lived_after_tenure_start
-      FROM first_lady
+        (death_year - birth_year) * 365 AS days_lived,
+        days_in_office,
+        (days_in_office  * 100) / ((death_year - birth_year) * 365) AS percentage_of_life_as_president
+      FROM president
       WHERE death_year IS NOT NULL
     `
 

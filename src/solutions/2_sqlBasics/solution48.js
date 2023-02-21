@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the AVG aggregate function to calculate average age of a
-first lady when she takes office.
+Use the AVG aggregate function to calculate how long each dead 
+president has lived on average.
 
 Log the response to ther Terminal.
 */
@@ -10,7 +10,7 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT AVG(age_at_tenure_start) AS avg_age FROM first_lady;
+      SELECT AVG(death_year - birth_year) AS avg_age FROM president WHERE death_year IS NOT NULL;
     `
 
     const [results, metadata] = await sequelize.query(query)

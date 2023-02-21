@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the AVG aggregate function to calculate average age of a
-first lady when she takes office.
+Use the AVG aggregate function to calculate how long each dead 
+president has lived on average.
 
 Log the response to ther Terminal.
 */

@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of presidents that were not democrat or republican and born before 1900 
-or presidents that are democrat and not dead yet.
+Calculate how old each president (who is dead) became. Use AS to
+give the calculation a descriptive name (e.g. age)
 
 Log the response to ther Terminal.
 */
@@ -10,10 +10,9 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT name, party, birth_year, death_year
+      SELECT name, death_year - birth_year AS age
       FROM president
-      WHERE (party NOT IN ('Republican', 'Democrat') AND birth_year < 1900) 
-        OR (party = 'Democrat' AND death_year IS NULL)
+      WHERE death_year IS NOT NULL
     `
 
     const [results, metadata] = await sequelize.query(query)

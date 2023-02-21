@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the COUNT aggregate function to calculate how many more first ladies 
-than presidents there have been. HINT: Use a nested SELECT query.
+There have been 46 presidents so far. Use DISTINCT to find out how many people
+have been president. HINT: You can wrap DISTINCT with COUNT
 
 Log the response to ther Terminal.
 */
@@ -10,7 +10,7 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT COUNT(*) - (SELECT COUNT(*) FROM president) AS president_first_lady_diff FROM first_lady;
+      SELECT COUNT(DISTINCT name) AS unique_presidents FROM president;
     `
 
     const [results, metadata] = await sequelize.query(query)

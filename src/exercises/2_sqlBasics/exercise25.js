@@ -1,7 +1,9 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all presidents not born between 1800 and 1900
+Retrieve a list of all first ladies that were between 18 and 30 years old 
+when they began their tenure as first lady of the US and where not born
+between 1800 and 1850.
 
 Log the response to the Terminal.
 */

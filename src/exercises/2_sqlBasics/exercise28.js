@@ -1,7 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the presidents that were part of the Whig, Federalist, or Democratic-Republican parties.
+Use the IN/NOT IN operator to retrieve a list of pets that are cats or rabbits.
+
 Log the response to ther Terminal.
 */
 

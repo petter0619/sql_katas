@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all presidents that sat for longer than the now standard 2 terms; 2992 days.
+Retrieve a list of all presidents that were born in the 1900s
 
 Log the response to the Terminal.
 */

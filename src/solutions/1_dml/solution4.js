@@ -14,7 +14,7 @@ const exercise = async () => {
     const query = `
       UPDATE president 
       SET left_office = '2021-01-20', days_in_office = 1461, sat_two_full_terms = FALSE
-      WHERE id = (SELECT id FROM president WHERE name = 'Donald J. Trump' AND number = 45) 
+      WHERE name = 'Donald J. Trump' AND number = 45 
       RETURNING *
     `
 

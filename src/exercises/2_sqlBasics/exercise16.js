@@ -1,8 +1,9 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the pets we know the birth date of.
-Log the response to ther Terminal.
+Retrieve a list of all presidents that sat for less than 1 term (1461 days).
+
+Log the response to the Terminal.
 */
 
 const exercise = async () => {

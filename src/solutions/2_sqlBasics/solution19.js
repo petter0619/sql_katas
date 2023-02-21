@@ -1,14 +1,14 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of all presidents that were born in the 1900s
+Retrieve a list of all first ladies that were born 1800 or earlier
 
 Log the response to the Terminal.
 */
 
 const exercise = async () => {
   try {
-    const query = `SELECT name, birth_year FROM president WHERE birth_year >= 1900;`
+    const query = `SELECT name, birth_year FROM first_lady WHERE birth_year <= 1800;`
 
     const [results, metadata] = await sequelize.query(query)
 

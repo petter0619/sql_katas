@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use LIMIT and ORDER BY to return the president that spent the least days in office.
+Use the MAX aggregate function to find the president that spend the most time in office.
 
 Log the response to ther Terminal.
 */
@@ -9,7 +9,7 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT name, days_in_office FROM president ORDER BY days_in_office ASC LIMIT 1
+      SELECT MAX(days_in_office) FROM president;
     `
 
     const [results, metadata] = await sequelize.query(query)

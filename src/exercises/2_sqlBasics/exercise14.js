@@ -1,10 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Without using the wife_of_president column retrieve a list of the first ladies
-that were not the 'Spouse' of the president they served as first lady for.
-
-Log the response to the Terminal.
+Use IS NULL to find the president who was not part of any political party.
+Log the response to ther Terminal.
 */
 
 const exercise = async () => {

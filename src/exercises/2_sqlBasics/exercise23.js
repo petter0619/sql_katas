@@ -1,8 +1,9 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the pets that we know the birth date of and that are not dead.
-Log the response to ther Terminal.
+Retrieve a list of all first ladies born between 1800 and 1900
+
+Log the response to the Terminal.
 */
 
 const exercise = async () => {

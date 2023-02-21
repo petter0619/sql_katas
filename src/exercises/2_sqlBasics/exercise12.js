@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of only the names, species and breed of Richard 
-Nixons pets using only his name. HINT: Use a nested SELECT statement.
+Retrieve a list of the names and birth countries of first ladies
+that were not born in USA:
 
 Log the response to the Terminal.
 */

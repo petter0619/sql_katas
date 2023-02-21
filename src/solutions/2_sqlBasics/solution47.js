@@ -1,8 +1,8 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the SUM aggregate function to calculate the total number of 
-days a president has been in office.
+Use the AVG aggregate function to calculate average age of a
+first lady when she takes office.
 
 Log the response to ther Terminal.
 */
@@ -10,7 +10,7 @@ Log the response to ther Terminal.
 const exercise = async () => {
   try {
     const query = `
-      SELECT SUM(days_in_office) AS days_total FROM president;
+      SELECT AVG(age_at_tenure_start) AS avg_age FROM first_lady;
     `
 
     const [results, metadata] = await sequelize.query(query)

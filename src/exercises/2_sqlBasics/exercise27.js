@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the pets that are either birds or horses.
+Retrieve a list of the presidents that were part of the Whig, Federalist, or Democratic-Republican parties.
 Log the response to ther Terminal.
 */
 

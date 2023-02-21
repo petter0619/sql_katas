@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use IS NULL to find the president who was not part of any political party.
+Retrieve a list of the pets we know the birth date of.
 Log the response to ther Terminal.
 */
 

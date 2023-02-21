@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Use the MAX aggregate function to find the president that spend the most time in office.
+Find the (dead) president that lived the longest using the MAX operator.
 
 Log the response to ther Terminal.
 */
