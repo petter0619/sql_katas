@@ -1,15 +1,16 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of only the names, species and breed of Richard 
-Nixons pets using only his name. HINT: Use a nested SELECT statement.
+Return a list of the names of all presidents who had first ladies
+that were not their wife and the number of first ladies they had 
+that were not their wife.
 
-Log the response to the Terminal.
+Log the response to ther Terminal.
 */
 
 const exercise = async () => {
   try {
-    const query = `SELECT name, species, breed FROM pet WHERE fk_president_id = (SELECT id FROM president WHERE name = 'Richard Nixon')`
+    const query = `SELECT '@TODO'`
 
     const [results, metadata] = await sequelize.query(query)
 

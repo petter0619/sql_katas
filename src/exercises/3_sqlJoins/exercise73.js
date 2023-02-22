@@ -1,17 +1,15 @@
 const { sequelize } = require('../../database/config')
 
 /*
-Retrieve a list of the presidents and first ladies that are still alive
+List the names of the presidents that owned pets but not
+any dogs. HINT: Test using NOT IN with a nested query.
+
 Log the response to ther Terminal.
 */
 
 const exercise = async () => {
   try {
-    const query = `
-      SELECT name, death_year FROM president WHERE death_year IS NULL 
-      UNION 
-      SELECT name, death_year FROM first_lady WHERE death_year IS NULL
-    `
+    const query = `SELECT '@TODO'`
 
     const [results, metadata] = await sequelize.query(query)
 
